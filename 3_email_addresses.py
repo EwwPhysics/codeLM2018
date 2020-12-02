@@ -7,5 +7,3 @@ def email(name):
         return a[0][0] + a[1][0] + a[2] + '@NewWaveComputers.com'
     else:
         return a[0][0] +  a[1] + '@NewWaveComputers.com'
-
-print(email('Jonus Jones Jawn'))
