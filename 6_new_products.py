@@ -1,13 +1,14 @@
 def solve(products):
-    most = 0
     product = {}
     for i in products:
-        count = products.count(i)
-        if count == most:
-            product.add(i)
-            most = count
-        elif count > most:
-            product = {i}
-            most = count
-    product = sorted(product)
-    return product
+        a = product.get(i, 0) + 1
+        product[i] = a
+    count = 0
+    result = []
+    for key, value in product.items():
+        if value > count:
+            result = [key]
+            count = value
+        elif value == count:
+            result.append(key)
+    return result
